@@ -9,7 +9,9 @@
     --twitter-background: #e6ecf0;
    
   }
-  
+.container{
+position: fixed;
+}
   .sidebarOption {
     display: flex;
     align-items: center;

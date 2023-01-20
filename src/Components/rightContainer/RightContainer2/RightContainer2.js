@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Avatar } from "@mui/material";
-import style from "./RightContainer1.module.css";
+import style from "./RightContainer2.module.css";
 import CustomButton from "../../../Atom/Button/CustomButton";
 
 function Righthomebox2() {
@@ -45,10 +45,12 @@ function Righthomebox2() {
                     <h3>{menu.text}</h3>
                     <h6>{menu.text2}</h6>
                   </div>
-                  <CustomButton
-                    buttonText="Follow"
-                    customCss={style.follwButton}
-                  />
+                  <div className={style.btntxt}>
+                    <CustomButton
+                      buttonText="Follow"
+                      customCss={style.follwButton}
+                    />
+                  </div>
                 </div>
               </div>
             </>

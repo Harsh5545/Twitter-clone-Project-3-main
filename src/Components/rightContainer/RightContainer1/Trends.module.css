@@ -1,0 +1,38 @@
+.keywords {
+    top: 80px;
+    right: 0;
+    width: 100%;
+  border-radius: 10px;
+    color: white;
+  }
+  .key {
+    background: rgb(22, 24, 28);;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .keyword__heading {
+    font-size: 20px;
+    
+    padding-bottom: 8px;
+  }
+  .country {
+    font-size: 14px;
+    color: silver;
+    font-weight: 300;
+    margin: 10px 0;
+  }
+  .keywords:hover{
+    color: silver;
+  }
+  .keyword__name {
+    margin-bottom: 8px;
+  }
+  .keyword__tweets {
+    margin-top: 7px;
+    color: silver;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .heading4{
+    color:white
+  }

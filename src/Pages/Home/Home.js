@@ -14,6 +14,7 @@ function Home() {
       <div className={style.middleContainer}></div>
       <div className={style.rightContainer}>
         <RightSide />
+        
       </div>
     </div>
   );

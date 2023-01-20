@@ -1,0 +1,32 @@
+.trends {
+    width: 25%;
+  }
+  .trends__search {
+    background-color: #000000;
+    position: fixed;
+    width: 25%;
+    top: 9px;
+    right: 0;
+    /* border-bottom: 1px solid #e6ecf0; */
+    padding-bottom: 20px;
+    margin-right: 2rem;
+  }
+  .trend__control {
+    border: none;
+    width: 90%;
+    margin-left: 20px;
+    outline: none;
+    background: rgb(22, 24, 28);    
+    border-radius: 50px;
+    color:white;
+    padding: 15px 40px;
+  }
+  .trend__icon {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+  }
+  .search {
+    font-size: 20px;
+    color: silver;
+  }

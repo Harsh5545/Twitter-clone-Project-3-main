@@ -37,34 +37,36 @@ function LeftSec() {
   };
   return (
     <>
-      <div>
-        {menu.map((menu) => {
-          return (
-            <>
-              <div className={style.sidebar}>
-                <div className={style.sidebarOption} key={menu.id}>
-                  <h2>{menu.icon}</h2>
-                  <span>{menu.Name}</span>
+      <div className={style.container}>
+        <div>
+          {menu.map((menu) => {
+            return (
+              <>
+                <div className={style.sidebar}>
+                  <div className={style.sidebarOption} key={menu.id}>
+                    <h2>{menu.icon}</h2>
+                    <span>{menu.Name}</span>
+                  </div>
                 </div>
-              </div>
-            </>
-          );
-        })}
-        <CustomButton
-          buttonText="Tweet"
-          customCss={style.sidebar__tweet}
-          btnNext={handleClickOpen}
-        />
+              </>
+            );
+          })}
+          <CustomButton
+            buttonText="Tweet"
+            customCss={style.sidebar__tweet}
+            btnNext={handleClickOpen}
+          />
 
-        <Dialog open={isOpen} onClose={handleClose}>
-          <Tweet />
-        </Dialog>
+          <Dialog open={isOpen} onClose={handleClose}>
+            <Tweet />
+          </Dialog>
+        </div>
+        <CustomButton2
+          picture={<Avatar alt="Remy Sharp" src="" />}
+          text={"Rishab Gupta"}
+          text2={"rishabgupta@gmail.com"}
+        />
       </div>
-      <CustomButton2
-        picture={<Avatar alt="Remy Sharp" src="" />}
-        text={"Rishab Gupta"}
-        text2={"rishabgupta@gmail.com"}
-      />
     </>
   );
 }
