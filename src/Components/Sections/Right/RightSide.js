@@ -20,7 +20,7 @@ function RightSide() {
       <div className={style.copyright}>
         <h6>
           Terms of Service Privacy Policy Cookie Policy Accessibility Ads info
-          More <span>© 2023 </span> Twitter, Inc.
+          More... <span>© 2023 </span> Twitter, Inc.
         </h6>
       </div>
     </div>
