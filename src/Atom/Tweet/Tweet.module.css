@@ -1,73 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  opacity: 1rem;
 }
 
-::selection{
-  
+::selection {
   background: #1da1f2;
-
 }
-.main{
-    background-color: #000000;
-    opacity: 0.8;
 
+.main {
+  background-color: #000000;
+  opacity: 0.8;
+  height: 100%;
 }
-.wrapper{
+
+.wrapper {
   background: #000000;
-  color: rgb(26, 140, 216);
+  color: #1da1f2;
   max-width: 475px;
   width: 37.5rem;
-  height: 15.5rem;
+  height: 16.5rem;
   border-radius: 15px;
-  padding: 0px 16px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
-  margin-top: 10%;
-}
-textarea{
-    background-color: #000000;
- 
+  padding: 16px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 9%;
 }
 
-.privacy:hover, .icons li:hover{
-  background: #000000
+textarea {
+  background-color: #000000;
+  color: #e6ecf0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-.privacy i{
+
+.privacy:hover,
+.icons li:hover {
+  background: #000000;
+}
+
+.privacy i {
   font-size: 18px;
 }
-.privacy span{
+
+.privacy span {
   font-size: 15px;
   font-weight: 600;
   margin-left: 7px;
 }
-.bottom{
+
+.bottom {
   display: flex;
-  margin-top: 13px;
+  margin-top: 12px;
   align-items: center;
   justify-content: space-between;
-  
 }
-.button{
-    background-color:#1A8CD8;
-    width: 7rem;
-    color: #e6ecf0;
-    padding: 0.8rem 0.6rem;
-    border-radius: 30rem;
-    margin: 0.8rem;
-    margin-left: 72%;
-    font-weight: bold;
-    min-height: 32px;
-    font-size: medium;
-  
+
+.button {
+  background-color: #1a8cd8;
+  width: 7rem;
+  color: #e6ecf0;
+  padding: 0.8rem 0.6rem;
+  border-radius: 30rem;
+  margin: 0.8rem;
+  margin-left: 73%;
+  font-weight: bold;
+  min-height: 31px;
+  cursor: pointer;
+  font-size: medium;
 }
-.bottom .icons{
+.parentContainer{
+  background-color: #000000;
+  height: fit-content;
+}
+.bottom .icons {
   display: inline-flex;
 }
-.icons li{
+
+.icons li {
   list-style: none;
   color: #1da1f2;
   font-size: 20px;
@@ -80,4 +97,15 @@ textarea{
   justify-content: center;
   border-radius: 50%;
   transition: background 0.2s ease;
+}
+.backdrop-blur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0.1, 0.2);
+  filter: blur(5px);
+  z-index: -1;
 }
