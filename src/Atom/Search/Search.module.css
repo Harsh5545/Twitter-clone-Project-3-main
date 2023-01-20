@@ -5,28 +5,28 @@
     background-color: #000000;
     position: fixed;
     width: 25%;
-    top: 9px;
-    right: 0;
+    top: 0.35rem;
+    right: 5.6rem;
     /* border-bottom: 1px solid #e6ecf0; */
-    padding-bottom: 20px;
-    margin-right: 2rem;
+    padding-bottom: 1.25rem;
+    margin-left: 0;
   }
   .trend__control {
     border: none;
     width: 90%;
-    margin-left: 20px;
+    /* margin-left: 0.1rem; */
     outline: none;
     background: rgb(22, 24, 28);    
     border-radius: 50px;
     color:white;
-    padding: 15px 40px;
+    padding: 0.93rem 2rem;
   }
   .trend__icon {
     position: absolute;
-    top: 15px;
-    left: 40px;
+    top: 0.93rem ;
+  
   }
   .search {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: silver;
   }

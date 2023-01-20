@@ -10,13 +10,21 @@ import { FcLike } from "react-icons/fc";
 import { VscGraph } from "react-icons/vsc";
 import { MdIosShare } from "react-icons/md";
 function TwitterPost() {
+  // const menu = [
+  //   { id: 0, icon: <FaTwitter /> },
+  //   { id: 1, icon: <FaHouseUser />},
+  //   { id: 2, icon: <FaHashtag /> },
+  //   { id: 3, icon: <IoMdNotifications /> },
+  //   { id: 4, icon: <HiOutlineMail /> },
+  //   { id: 5, icon: <BsBookmark /> },
+  //   { id: 6, icon: <TbFileText /> },
+  //   { id: 7, icon: <BsPerson /> },
+  //   { id: 8, icon: <CgMoreO /> },
+  // ];
   return (
     <div>
       <div className={style.feed}>
-        {/* <div className={style.feed__header}> */}
-        {/* <h2>Home</h2> */}
-
-        {/* </div> */}
+ 
         <div className={style.tweetBox}>
           <form>
             <div className={style.tweetbox__input}>

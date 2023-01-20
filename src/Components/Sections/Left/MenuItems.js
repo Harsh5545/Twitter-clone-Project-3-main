@@ -72,8 +72,8 @@ function LeftSec() {
         </div>
         <CustomButton2
           picture={<Avatar alt="Remy Sharp" src="" />}
-          text={"Rishab Gupta"}
-          text2={"rishabgupta@gmail.com"}
+          text={"Unknown"}
+          text2={"Unknown@gmail.com"}
           button={handleOpen}
         />
         <DialogBox open={open} onClose={handleClickClose} />

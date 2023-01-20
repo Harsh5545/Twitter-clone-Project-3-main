@@ -41,10 +41,7 @@ position: fixed;
     border-radius: 30px;
     color: white;
     transition: color 100ms ease-out;
-    
-   
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
-   
   }
 
   
@@ -59,17 +56,17 @@ position: fixed;
     color: white;
     font-weight: 900;
     border-radius: 30px;
-    height: 50px;
-    margin-top: 20px;
+    height: 3.12rem;
+    margin-top: 1.25rem;
   }
   
   
   .sidebar {
     color: white;
-    min-width: 250px;
-    margin-top: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-width: 15.6rem;
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   
   .fatwitter {

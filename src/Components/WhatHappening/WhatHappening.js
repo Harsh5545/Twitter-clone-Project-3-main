@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import style from "./Tweet.module.css";
+import style from "./whatHappening.module.css";
 import { FaGlobe, FaImage, FaMapMarker } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
-import CustomButton from "../Button/CustomButton";
-function Tweet() {
+import CustomButton from "../../Atom/Button/CustomButton";
+function WhatHappening() {
   const [isOpen, setIsOpen] = useState(false);
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
@@ -27,7 +27,6 @@ function Tweet() {
               <FaGlobe />
               <span>Everyone can reply</span>
             </div>
-
             <div className={style.bottom}>
               {Icons.map((menu) => {
                 return (
@@ -50,4 +49,4 @@ function Tweet() {
     </>
   );
 }
-export default Tweet;
+export default WhatHappening;
