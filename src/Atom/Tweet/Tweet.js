@@ -4,7 +4,7 @@ import { FaGlobe, FaImage, FaMapMarker } from "react-icons/fa";
 import { FiCamera } from "react-icons/fi";
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
-import CustomButton from "../CustomButton/CustomButton";
+import CustomButton from "../Button/CustomButton";
 function Tweet() {
   const [isOpen, setIsOpen] = useState(false);
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./Login.module.css";
-import CustomButton from "../../Atom/CustomButton/CustomButton";
+import CustomButton from "../../Atom/Button/CustomButton";
 import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
 import { useRecoilState, useRecoilValue } from "recoil";

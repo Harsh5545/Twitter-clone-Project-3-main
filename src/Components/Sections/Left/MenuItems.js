@@ -7,13 +7,13 @@ import { BsBookmark, BsPerson } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { TbFileText } from "react-icons/tb";
 import { CgMoreO } from "react-icons/cg";
-import CustomButton from "../../../Atom/CustomButton/CustomButton";
+import CustomButton from "../../../Atom/Button/CustomButton";
 import Tweet from "../../../Atom/Tweet/Tweet";
 import style from "./MenuItem.module.css";
 import Dialog from "@mui/material/Dialog";
 import { IoMdNotifications } from "react-icons/io";
 import { Avatar } from "@mui/material";
-import CustomButton2 from "../../../Atom/CustomButton/CustomButton2";
+import CustomButton2 from "../../../Atom/Button/CustomButton2";
 // import User from "./User";
 
 function LeftSec() {

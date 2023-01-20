@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./Register.module.css";
-import CustomButton from "../../Atom/CustomButton/CustomButton";
+import CustomButton from "../../Atom/Button/CustomButton";
 import { isValidEmail, isValidMobile, isValidString } from "../../helper";
 import styleDob from "../../Components/Dob/Dob.module.css";
 import Input from "../../Atom/Input/Input";
