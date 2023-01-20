@@ -16,7 +16,7 @@
     margin: 0.1rem;
 padding-left: 0.8rem;
 padding-top: 0.2rem;
-justify-content: space-between;
+/* justify-content: space-between; */
 
 
 }
@@ -32,12 +32,13 @@ justify-content: space-between;
     border-radius: 20px;
     height: 30px;
     display: flex;
+    margin-left: 4rem;
     width: 5rem;
     flex-direction: row;
-    padding-left: 1rem;
+   
     border: none;
     outline: none;
     align-items: center;
-  margin-left:auto;
+  /* margin-left:auto; */
 
 }

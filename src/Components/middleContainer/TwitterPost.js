@@ -40,7 +40,7 @@ function TwitterPost() {
             <div className={style.post__header}>
               <div className={style.post__headerText}>
                 <h3>
-                  Rishab
+                  Unknown
                   <span className={style.post__headerSpecial}>
                     <GoVerified />
                     @something
@@ -79,7 +79,7 @@ function TwitterPost() {
             <div className={style.post__header}>
               <div className={style.post__headerText}>
                 <h3>
-                  Rishab
+                  Unknown
                   <span className={style.post__headerSpecial}>
                     <GoVerified />
                     @something
@@ -118,7 +118,7 @@ function TwitterPost() {
             <div className={style.post__header}>
               <div className={style.post__headerText}>
                 <h3>
-                  Rishab
+                  Unknown
                   <span className={style.post__headerSpecial}>
                     <GoVerified />
                     @something
@@ -157,7 +157,7 @@ function TwitterPost() {
             <div className={style.post__header}>
               <div className={style.post__headerText}>
                 <h3>
-                  Rishab
+                  Unknown
                   <span className={style.post__headerSpecial}>
                     <GoVerified />
                     @something
