@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    --twitter-color: #50b7f5;
+    --twitter-background: #e6ecf0;
+   
+  }
+  
+  .sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap:0.6rem;
+    padding: 0.3rem;
+  }
+/*   
+  .sidebarOption .material-icons,
+  .fa-twitter {
+    padding: 20px;
+  } */
+  
+  .sidebarOption h2 {
+    font-weight: 800;
+    font-size: 1.4rem;
+    /* margin-right: 20px; */
+  }
+  .sidebarOption span{
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    
+  }
+  
+  .sidebarOption:hover {
+    background-color: rgb(77, 75, 75);
+    border-radius: 30px;
+    color: white;
+    transition: color 100ms ease-out;
+    
+   
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
+   
+  }
+
+  
+  .sidebarOptionactive {
+    color: var(--twitter-color);
+  }
+  
+  .sidebar__tweet {
+    width: 100%;
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+  }
+  
+  
+  .sidebar {
+    color: white;
+    min-width: 250px;
+    margin-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .fatwitter {
+    color: var(--twitter-color);
+    font-size: 30px;
+  }
+
