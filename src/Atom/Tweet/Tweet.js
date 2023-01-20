@@ -7,6 +7,7 @@ import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../Button/CustomButton";
 function Tweet() {
   const [isOpen, setIsOpen] = useState(false);
+ 
   return (
     <>
       <div className={style.parentContainer}>

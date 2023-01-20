@@ -14,6 +14,7 @@ import Dialog from "@mui/material/Dialog";
 import { IoMdNotifications } from "react-icons/io";
 import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
+import DialogBox from "../../Dialog/DialogBox";
 // import User from "./User";
 
 function LeftSec() {
@@ -35,6 +36,14 @@ function LeftSec() {
   const handleClose = () => {
     SetisOpen(false);
   };
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClickClose = () => {
+    setOpen(false);
+  };
+
   return (
     <>
       <div className={style.container}>
@@ -65,7 +74,9 @@ function LeftSec() {
           picture={<Avatar alt="Remy Sharp" src="" />}
           text={"Rishab Gupta"}
           text2={"rishabgupta@gmail.com"}
+          button={handleOpen}
         />
+        <DialogBox open={open} onClose={handleClickClose} />
       </div>
     </>
   );

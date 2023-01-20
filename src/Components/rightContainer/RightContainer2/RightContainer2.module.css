@@ -1,9 +1,10 @@
 .container{
     color: #fff;
     background-color: #16181C;
-  margin: 0.4rem;
-  width: 100%;
+  margin: 0.2rem;
+  width: 89%;
   height: 100%;
+
 }
 .container h1{
     margin: 0.4rem;
@@ -15,7 +16,6 @@
     margin: 0.1rem;
 padding-left: 0.8rem;
 padding-top: 0.2rem;
-/* gap: 2rem; */
 justify-content: space-between;
 
 
