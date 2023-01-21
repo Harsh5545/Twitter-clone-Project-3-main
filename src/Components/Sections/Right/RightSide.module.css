@@ -6,7 +6,12 @@
     flex-direction: column;
     height: 100%;
     gap: 1.5rem;
+    overflow-y: scroll;
+
     
+}
+.container::-webkit-scrollbar{
+    display: none;
 }
 
 .copyright{
