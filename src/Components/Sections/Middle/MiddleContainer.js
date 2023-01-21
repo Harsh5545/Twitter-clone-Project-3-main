@@ -7,11 +7,16 @@ import WhatHappening from "../../WhatHappening/WhatHappening";
 function MiddleContainer() {
   return (
     <>
-      <div className={style.navbarContainer}>
-        <Navbar />
-      </div>
-      <div className={style.twitterPostContainer}>
-        <WhatHappening />
+      <div className={style.main}>
+        <div className={style.navbarContainer}>
+          <Navbar />
+        </div>
+        <div className={style.twitterPostContainer}>
+          <WhatHappening />
+        </div>
+        <div className={style.postContainer}>
+          <TwitterPost />
+        </div>
       </div>
     </>
   );

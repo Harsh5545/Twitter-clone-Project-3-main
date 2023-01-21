@@ -10,9 +10,12 @@
    
   }
 .container{
-position: fixed;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
 
 }
+
   .sidebarOption {
     display: flex;
     align-items: center;
@@ -20,11 +23,14 @@ position: fixed;
     gap:0.6rem;
     padding: 0.3rem;
   }
+.innerContainer{
+  position: fixed;
 
+}
   
   .sidebarOption h2 {
     font-weight: 800;
-    font-size: 1.4rem;
+    font-size: 1.641rem;
     /* margin-right: 20px; */
   }
   .sidebarOption span{
@@ -47,16 +53,15 @@ position: fixed;
   }
   
   .sidebar__tweet {
-    width: 100%;
-    background-color: var(--twitter-color);
+    width: 85%;
+    background-color: #1A8CD8;
     border: none;
     color: white;
     font-weight: 900;
     border-radius: 30px;
     height: 3.12rem;
-    margin-top: 1.25rem;
+    /* margin-top: 1.25rem;  } */
   }
-  
   
   .sidebar {
     color: white;

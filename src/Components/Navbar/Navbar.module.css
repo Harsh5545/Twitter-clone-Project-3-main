@@ -1,10 +1,10 @@
 .feed__header {
   width: 100%;
   top: 0;
-  background-color: black;
+  background-color: transparent;
   /* background-color: white; */
   z-index: 10;
-  border: 1px solid var(--twitter-background);
+  border-bottom: 0.5px solid var(--twitter-background);
   padding: 0.93rem 1.25rem;
 }
 

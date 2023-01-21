@@ -21,8 +21,7 @@ function WhatHappening() {
       <div className={style.parentContainer}>
         <div className={style.main}>
           <div className={style.wrapper}>
-            <textarea placeholder="What's happening?" rows={8} cols={60} />
-
+            <textarea placeholder="What's happening?" rows={8} cols={60}/>
             <div className={style.privacy}>
               <FaGlobe />
               <span>Everyone can reply</span>

@@ -16,7 +16,7 @@
   /* height: 4rem; */
 }
 .parentContainer{
-width: 34rem;
+width: 100%;
 }
 .wrapper {
   background: #000000;
@@ -98,9 +98,9 @@ textarea {
   list-style: none;
   color: #1da1f2;
   font-size: 20px;
-  margin: 0 2px;
-  height: 38px;
-  width: 38px;
+
+  height: 34.4px;
+  width: 34.4px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -108,14 +108,4 @@ textarea {
   border-radius: 50%;
   transition: background 0.2s ease;
 }
-.backdrop-blur::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0.1, 0.2);
-  filter: blur(5px);
-  z-index: -1;
-}
+

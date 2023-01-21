@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Avatar } from "@mui/material";
 import style from "./RightContainer2.module.css";
 import CustomButton from "../../../Atom/Button/CustomButton";

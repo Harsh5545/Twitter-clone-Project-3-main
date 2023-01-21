@@ -47,36 +47,41 @@ function LeftSec() {
   return (
     <>
       <div className={style.container}>
-        <div>
-          {menu.map((menu) => {
-            return (
-              <>
+        <div className={style.innerContainer}>
+          <div className={style.innerContainer2}>
+            {menu.map((menu) => {
+              return (
                 <div className={style.sidebar}>
                   <div className={style.sidebarOption} key={menu.id}>
                     <h2>{menu.icon}</h2>
                     <span>{menu.Name}</span>
                   </div>
                 </div>
-              </>
-            );
-          })}
-          <CustomButton
-            buttonText="Tweet"
-            customCss={style.sidebar__tweet}
-            btnNext={handleClickOpen}
-          />
+              );
+            })}
+            <CustomButton
+              buttonText="Tweet"
+              customCss={style.sidebar__tweet}
+              btnNext={handleClickOpen}
+            />
 
-          <Dialog open={isOpen} onClose={handleClose}>
-            <Tweet />
-          </Dialog>
+            <Dialog open={isOpen} onClose={handleClose}>
+              <Tweet />
+            </Dialog>
+          </div>
+          <CustomButton2
+            picture={
+              <Avatar
+                alt="Remy Sharp"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/725px-Virat_Kohli_portrait.jpg"
+              />
+            }
+            text={"Unknown"}
+            text2={"Unknown@gmail.com"}
+            button={handleOpen}
+          />
+          <DialogBox open={open} onClose={handleClickClose} />
         </div>
-        <CustomButton2
-          picture={<Avatar alt="Remy Sharp" src="" />}
-          text={"Unknown"}
-          text2={"Unknown@gmail.com"}
-          button={handleOpen}
-        />
-        <DialogBox open={open} onClose={handleClickClose} />
       </div>
     </>
   );
