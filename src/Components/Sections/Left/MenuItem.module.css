@@ -5,7 +5,7 @@
   }
   
   body {
-    --twitter-color: #50b7f5;
+    color: #50b7f5;
     --twitter-background: #e6ecf0;
    
   }
@@ -22,6 +22,7 @@
     cursor: pointer;
     gap:0.6rem;
     padding: 0.3rem;
+    font-family: "TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif";
   }
 .innerContainer{
   position: fixed;
@@ -31,6 +32,7 @@
   .sidebarOption h2 {
     font-weight: 800;
     font-size: 1.641rem;
+    color: rgb(231, 233, 234);
     /* margin-right: 20px; */
   }
   .sidebarOption span{
@@ -75,4 +77,6 @@
     color: var(--twitter-color);
     font-size: 30px;
   }
-
+.button2{
+  margin-bottom: 0rem ;
+}

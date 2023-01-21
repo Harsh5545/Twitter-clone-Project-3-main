@@ -17,7 +17,7 @@
 .main {
   background-color: #000000;
   opacity: 0.8;
-  height: 100%;
+  height: 6rem;
 
   
 }
@@ -28,7 +28,7 @@
   max-width: 29.6875rem;
   /* width: 37.5rem; */
   width: 100%;
-  height: 6.5rem;
+  height: 100%;
   border-radius: 15px;
   border: none;
   padding-left: 2rem;
@@ -46,6 +46,9 @@ textarea {
   font-size: 1rem;
   box-sizing: border-box;
   border-radius: 5px;
+}
+textarea::-webkit-scrollbar{
+  display: none;
 }
 
 .privacy:hover,
@@ -72,17 +75,17 @@ textarea {
 }
 
 .button {
-  background-color: #1a8cd8;
-  width: 7rem;
+  background-color: #0E4D77;
+  width: 5rem;
   color: #e6ecf0;
-  padding: 0.8rem 0.6rem;
-  border-radius: 30rem;
-  margin: 0.8rem;
-  margin-left: 73%;
+  padding: 0.6rem 0.5rem;
+  border-radius: 30px;
+  margin: 02.5rem;
+  margin-left: 82%;
   font-weight: bold;
-  min-height: 1.93rem;
+  min-height:1.9rem;
   cursor: pointer;
-  font-size: medium;
+  font-size: 1rem;
   
 }
 

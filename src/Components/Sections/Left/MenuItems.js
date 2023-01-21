@@ -11,7 +11,7 @@ import CustomButton from "../../../Atom/Button/CustomButton";
 import Tweet from "../../../Atom/Tweet/Tweet";
 import style from "./MenuItem.module.css";
 import Dialog from "@mui/material/Dialog";
-import { IoMdNotifications } from "react-icons/io";
+import { VscBellDot } from "react-icons/vsc";
 import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
@@ -22,7 +22,7 @@ function LeftSec() {
     { id: 0, icon: <FaTwitter /> },
     { id: 1, icon: <FaHouseUser />, Name: "Home" },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
-    { id: 3, icon: <IoMdNotifications />, Name: "Notifications" },
+    { id: 3, icon: <VscBellDot />, Name: "Notifications" },
     { id: 4, icon: <HiOutlineMail />, Name: "Message" },
     { id: 5, icon: <BsBookmark />, Name: "Bookmarks" },
     { id: 6, icon: <TbFileText />, Name: "Lists" },
@@ -79,6 +79,7 @@ function LeftSec() {
             text={"Unknown"}
             text2={"Unknown@gmail.com"}
             button={handleOpen}
+            customCss={style.button2}
           />
           <DialogBox open={open} onClose={handleClickClose} />
         </div>
