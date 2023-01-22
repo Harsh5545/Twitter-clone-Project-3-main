@@ -1,20 +1,18 @@
 .trends {
-    width: 25%;
+    width:100%;
+    
   }
   .trends__search {
     background-color: #000000;
     position: fixed;
     width: 25%;
-    top: 0.35rem;
-    right: 5.6rem;
-    /* border-bottom: 1px solid #e6ecf0; */
+    right: 6rem;
     padding-bottom: 1.25rem;
-    margin-left: 0;
+   
   }
   .trend__control {
     border: none;
     width: 90%;
-    /* margin-left: 0.1rem; */
     outline: none;
     background: rgb(22, 24, 28);    
     border-radius: 50px;
@@ -23,7 +21,7 @@
   }
   .trend__icon {
     position: absolute;
-    top: 0.93rem ;
+    top: 0.85rem ;
   
   }
   .search {

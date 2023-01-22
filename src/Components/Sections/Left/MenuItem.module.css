@@ -13,6 +13,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  right: 1.6rem;
 
 
 }
@@ -21,22 +22,26 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    gap:0.6rem;
-    padding: 0.3rem 1rem;
-   width: max-content;
+    gap:0.89rem;
+    padding: 0.2rem 0.5rem;
+    width: max-content;
+   display:inline-flex;
+   text-align: center ;
     font-family: "TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif";
   }
 
   
   .sidebarOption h2 {
-    font-weight: 800;
+    font-weight: 00;
     font-size: 1.641rem;
     color: rgb(231, 233, 234);
-    /* margin-right: 20px; */
+   
   }
   .sidebarOption span{
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+ 
     
   }
   .container{
@@ -88,6 +93,15 @@
   font-weight: 800;
   font-size: 1.641rem;
   color: rgb(231, 233, 234);
-  margin-left: 1.4rem;
+  width: max-content;
+ padding: 0.2rem 0.5rem;
+  margin-left: 1.01rem;
+  margin-top: 0.55rem;
+  border-radius: 8rem;
   
+  
+}
+.logo:hover{
+  background-color: #131E3A;
+
 }

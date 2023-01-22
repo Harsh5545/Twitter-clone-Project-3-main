@@ -3,7 +3,8 @@ import style from "./Login.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { Navigate, useNavigate } from "react-router-dom";
+
 // import { Data } from "../../Recoil/Atom1/Atom";
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
@@ -11,6 +12,7 @@ function Login() {
   const [nextbtn, setNextBtn] = useState(false);
   // const [isLogin, setIsLogin] = useRecoilState(Data);
   // setIsLogin(true);
+  const nevigate = useNavigate();
   const [loginv, setLoginV] = useState("");
   const [passWordValue, setPasswordValue] = useState("");
   const [localstorageKey, setLocalstorageKey] = useState();
@@ -53,16 +55,16 @@ function Login() {
     //console.log(isLogin);
 
     let flagForLs = 0;
-    //for (var i = 0; i < localStorage.length; i++){
     let k = JSON.parse(localStorage.getItem("user" + localstorageKey));
     console.log(k.password);
-    //console.log(loginv)
+
     if (k.password === passWordValue) {
       flagForLs = 1;
     }
-    //}
+
     if (flagForLs == 1) {
       alert("True");
+      nevigate = "/";
     } else {
       alert("false");
     }

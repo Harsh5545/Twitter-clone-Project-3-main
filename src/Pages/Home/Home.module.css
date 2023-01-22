@@ -14,3 +14,6 @@
 .rightContainer{
     width:34%;
 }
+.main::-webkit-scrollbar{
+    display: none;
+}

@@ -16,7 +16,6 @@ import { isLoginAtom } from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-  const [isRequestForLogin, setIsRequestFoLogin] = useState(false);
   const [form, Setform] = useState(false);
   const [toggle, setToggle] = useState(false);
 
@@ -35,15 +34,16 @@ function Register() {
   const [phoneError, setPhoneError] = useState();
   const [dobError, setDobError] = useState();
   const [passwordError, setPasswordError] = useState("");
-  //const setLoginStatus = useSetRecoilState(isLoginAtom);
+  const setLoginStatus = useSetRecoilState(isLoginAtom);
   const navigate = useNavigate();
-  /* useEffect(() => {
-    if (localStorage.getItem("userDetails")) {
-      let data = JSON.parse(localStorage.getItem("userDetails"));
-      setData(data);
-      console.log(data);
-    }
-  }, []);*/
+  // useEffect(() => {
+  //   if (localStorage.getItem("user")) {
+  //     let data = JSON.parse(localStorage.getItem("user"));
+  //     setData(data);
+  //     console.log(data);
+  //   }
+  // }, []);
+
   function Form() {
     Setform(true);
   }
@@ -87,7 +87,7 @@ function Register() {
 
     let flag = 0;
     if (!isValidString(name)) {
-      setNameError("Incorrect Name");
+      setNameError("please fill correct name input");
       //  flag = 0;
     } else {
       // flag = 1;
@@ -96,7 +96,7 @@ function Register() {
 
     if (toggle === true) {
       if (!isValidMobile(phone)) {
-        setPhoneError("Incorrect Phone");
+        setPhoneError("please fill correct phone input");
         // flag = 0;
       } else {
         // flag = 1;
@@ -104,7 +104,7 @@ function Register() {
       }
     } else {
       if (!isValidEmail(email)) {
-        setEmailError("Incorrect email");
+        setEmailError("please fill correct email input");
 
         //flag = 0;
       } else {
@@ -114,7 +114,7 @@ function Register() {
     }
     if (!isValidPassword(password)) {
       // flag=0
-      setPasswordError("Wrong Password");
+      setPasswordError("please fill correct password input");
     } else {
       //flag=1
       setPasswordError("");
@@ -132,7 +132,7 @@ function Register() {
     }
     if (Data.Month == "" || Data.Date == "" || Data.Year == "") {
       flag = 0;
-      setDobError("Give DOB Proberly");
+      setDobError("please fill correct DOB input");
     } else {
       setDobError("");
     }
@@ -141,14 +141,13 @@ function Register() {
       var flagForLs = 0;
       for (var i = 0; i < localStorage.length; i++) {
         let k = JSON.parse(localStorage.getItem("user" + i));
-        console.log(k.Email);
 
         if (k.Email === email) {
           flagForLs = 1;
         }
       }
       if (flagForLs == 1) {
-        alert("Already Exist");
+        alert("USER Email is Already Exist");
       } else {
       }
     }
@@ -156,10 +155,10 @@ function Register() {
     if (flag == 1 && flagForLs == 0) {
       localStorage.setItem("user" + incl, JSON.stringify(Data));
       setIncl(incl + 1);
-      alert("Sucessfully stored");
-      //setLoginStatus(true);
-      // window.location.assign("/");/
-      //navigate("/");
+      alert("USER Sucessfully Registered");
+      setLoginStatus(true);
+      // window.location.assign("/");
+      navigate("/");
     }
   }
   return (

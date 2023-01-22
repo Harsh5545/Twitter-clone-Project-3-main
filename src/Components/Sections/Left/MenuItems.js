@@ -19,7 +19,6 @@ import DialogBox from "../../Dialog/DialogBox";
 
 function LeftSec() {
   const menu = [
-    // { id: 0, icon: <FaTwitter /> },
     { id: 1, icon: <FaHouseUser />, Name: "Home" },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },

@@ -11,10 +11,9 @@
     position: sticky;
     top: 0;
     background-color: rgb(231, 222, 222);
-    /* background-color: white; */
     z-index: 100;
     border: 1px solid var(--twitter-background);
-    padding: 0.15px 1.20px;
+    padding: 0.15px 1.20px; 
   }
   
   .feed__header h2 {
