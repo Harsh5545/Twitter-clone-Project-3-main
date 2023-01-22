@@ -19,7 +19,7 @@ import DialogBox from "../../Dialog/DialogBox";
 
 function LeftSec() {
   const menu = [
-    { id: 0, icon: <FaTwitter /> },
+    // { id: 0, icon: <FaTwitter /> },
     { id: 1, icon: <FaHouseUser />, Name: "Home" },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },
@@ -49,6 +49,10 @@ function LeftSec() {
       <div className={style.container}>
         <div className={style.innerContainer}>
           <div className={style.innerContainer2}>
+            <div className={style.logo}>
+              <FaTwitter />
+            </div>
+
             {menu.map((menu) => {
               return (
                 <div className={style.sidebar}>
@@ -69,19 +73,21 @@ function LeftSec() {
               <Tweet />
             </Dialog>
           </div>
-          <CustomButton2
-            picture={
-              <Avatar
-                alt="Remy Sharp"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/725px-Virat_Kohli_portrait.jpg"
-              />
-            }
-            text={"Unknown"}
-            text2={"Unknown@gmail.com"}
-            button={handleOpen}
-            customCss={style.button2}
-          />
-          <DialogBox open={open} onClose={handleClickClose} />
+          <div>
+            <CustomButton2
+              picture={
+                <Avatar
+                  alt="Remy Sharp"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/725px-Virat_Kohli_portrait.jpg"
+                />
+              }
+              text={"Unknown"}
+              text2={"Unknown@gmail.com"}
+              button={handleOpen}
+              customCss={style.button2}
+            />
+            <DialogBox open={open} onClose={handleClickClose} />
+          </div>
         </div>
       </div>
     </>

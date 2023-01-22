@@ -25,9 +25,7 @@ function Tweet() {
               placeholder="What's happening?........"
               rows={8}
               cols={60}
-            >
-              <img src="" />
-            </textarea>
+            ></textarea>
 
             <div className={style.privacy}>
               <FaGlobe />

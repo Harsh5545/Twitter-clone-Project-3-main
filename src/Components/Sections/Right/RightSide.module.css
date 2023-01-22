@@ -7,6 +7,8 @@
     height: 100%;
     gap: 1.5rem;
     overflow-y: scroll;
+    width: 400px;   
+    
 
     
 }

@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import style from "./Register.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
-import { isValidEmail, isValidMobile, isValidString } from "../../helper";
+import {
+  isValidEmail,
+  isValidMobile,
+  isValidString,
+  isValidPassword,
+} from "../../helper";
 import styleDob from "../../Components/Dob/Dob.module.css";
 import Input from "../../Atom/Input/Input";
 import { Link } from "react-router-dom";
@@ -14,10 +19,12 @@ function Register() {
   const [isRequestForLogin, setIsRequestFoLogin] = useState(false);
   const [form, Setform] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [next, setNext] = useState(false);
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const [data, setData] = useState([]);
   const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
@@ -27,15 +34,16 @@ function Register() {
   const [nameError, setNameError] = useState();
   const [phoneError, setPhoneError] = useState();
   const [dobError, setDobError] = useState();
-  const setLoginStatus = useSetRecoilState(isLoginAtom);
+  const [passwordError, setPasswordError] = useState("");
+  //const setLoginStatus = useSetRecoilState(isLoginAtom);
   const navigate = useNavigate();
-  useEffect(() => {
+  /* useEffect(() => {
     if (localStorage.getItem("userDetails")) {
       let data = JSON.parse(localStorage.getItem("userDetails"));
       setData(data);
       console.log(data);
     }
-  }, []);
+  }, []);*/
   function Form() {
     Setform(true);
   }
@@ -50,6 +58,9 @@ function Register() {
   }
   function handleEmail(inputEmail) {
     setEmail(inputEmail);
+  }
+  function handlePassword(inputPassword) {
+    setPassword(inputPassword);
   }
   function handleMonth(inputMonth) {
     setMonth(inputMonth);
@@ -67,6 +78,7 @@ function Register() {
       Name: name,
       Phone: phone,
       Email: email,
+      password: password,
 
       Month: month,
       Year: day,
@@ -76,30 +88,48 @@ function Register() {
     let flag = 0;
     if (!isValidString(name)) {
       setNameError("Incorrect Name");
-      flag = 0;
+      //  flag = 0;
     } else {
-      flag = 1;
+      // flag = 1;
       setNameError("");
     }
+
     if (toggle === true) {
       if (!isValidMobile(phone)) {
         setPhoneError("Incorrect Phone");
-        flag = 0;
+        // flag = 0;
       } else {
-        flag = 1;
+        // flag = 1;
         setPhoneError("");
       }
     } else {
       if (!isValidEmail(email)) {
         setEmailError("Incorrect email");
 
-        flag = 0;
+        //flag = 0;
       } else {
-        flag = 1;
+        // flag = 1;
         setEmailError("");
       }
     }
+    if (!isValidPassword(password)) {
+      // flag=0
+      setPasswordError("Wrong Password");
+    } else {
+      //flag=1
+      setPasswordError("");
+    }
 
+    if (
+      (isValidString(name) &&
+        isValidMobile(phone) &&
+        isValidPassword(password)) ||
+      (isValidString(name) && isValidEmail(email) && isValidPassword(password))
+    ) {
+      flag = 1;
+    } else {
+      flag = 0;
+    }
     if (Data.Month == "" || Data.Date == "" || Data.Year == "") {
       flag = 0;
       setDobError("Give DOB Proberly");
@@ -108,12 +138,28 @@ function Register() {
     }
 
     if (flag == 1) {
+      var flagForLs = 0;
+      for (var i = 0; i < localStorage.length; i++) {
+        let k = JSON.parse(localStorage.getItem("user" + i));
+        console.log(k.Email);
+
+        if (k.Email === email) {
+          flagForLs = 1;
+        }
+      }
+      if (flagForLs == 1) {
+        alert("Already Exist");
+      } else {
+      }
+    }
+
+    if (flag == 1 && flagForLs == 0) {
       localStorage.setItem("user" + incl, JSON.stringify(Data));
       setIncl(incl + 1);
       alert("Sucessfully stored");
-      setLoginStatus(true);
+      //setLoginStatus(true);
       // window.location.assign("/");/
-      navigate("/");
+      //navigate("/");
     }
   }
   return (
@@ -161,6 +207,14 @@ function Register() {
                         <h6>Use Phone instead</h6>
                       )}
                     </span>
+                    <div>
+                      <Input
+                        className={style.input2}
+                        placeholder="Password"
+                        handleOnchange={handlePassword}
+                      />
+                      <span style={{ color: "red" }}>{passwordError}</span>
+                    </div>
                     <div>
                       <div>
                         <h4 style={{ color: "white" }}>Date of birth</h4>

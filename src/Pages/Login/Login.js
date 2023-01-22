@@ -6,13 +6,66 @@ import Input from "../../Atom/Input/Input";
 import { useRecoilState, useRecoilValue } from "recoil";
 // import { Data } from "../../Recoil/Atom1/Atom";
 import { Link } from "react-router-dom";
-
+import { isValidLogin } from "../../helper";
 function Login() {
   const [nextbtn, setNextBtn] = useState(false);
   // const [isLogin, setIsLogin] = useRecoilState(Data);
   // setIsLogin(true);
+  const [loginv, setLoginV] = useState("");
+  const [passWordValue, setPasswordValue] = useState("");
+  const [localstorageKey, setLocalstorageKey] = useState();
+  const [loginError, setLoginError] = useState("");
+  function loginValue(inputLogin) {
+    setLoginV(inputLogin);
+  }
+  function passWordChangeValue(inputPassword) {
+    setPasswordValue(inputPassword);
+  }
   const buttonNext = () => {
-    setNextBtn(true);
+    let flag = 1;
+    if (isValidLogin(loginv)) {
+      setLoginError("Give Username or Email or Phoneno");
+
+      flag = 1;
+    } else {
+      flag = 0;
+    }
+
+    let flagForLs = 0;
+    for (var i = 0; i < localStorage.length; i++) {
+      let k = JSON.parse(localStorage.getItem("user" + i));
+      //console.log(k.Email)
+      //console.log(loginv)
+      if (k.Email === loginv || k.Name === loginv || k.Phone == loginv) {
+        flagForLs = 1;
+        //const store=i;
+        setLocalstorageKey(i);
+      }
+    }
+    if (flagForLs == 1 && flag == 0) {
+      setNextBtn(true);
+    } else if (flagForLs == 0) {
+      setNextBtn(false);
+      setLoginError("User Not Found");
+    }
+  };
+  const handleLogIn = () => {
+    //console.log(isLogin);
+
+    let flagForLs = 0;
+    //for (var i = 0; i < localStorage.length; i++){
+    let k = JSON.parse(localStorage.getItem("user" + localstorageKey));
+    console.log(k.password);
+    //console.log(loginv)
+    if (k.password === passWordValue) {
+      flagForLs = 1;
+    }
+    //}
+    if (flagForLs == 1) {
+      alert("True");
+    } else {
+      alert("false");
+    }
   };
 
   return (
@@ -25,13 +78,17 @@ function Login() {
               <div className={style.containerpass}>
                 <h1>Enter your Password</h1>
                 <div>
-                  <Input className={style.input2} placeholder="passsword" />
+                  <Input
+                    className={style.input2}
+                    placeholder="passsword"
+                    handleOnchange={passWordChangeValue}
+                  />
                 </div>
 
                 <div className={style.password}>
                   <CustomButton
                     buttonText="Log In"
-                    // btnNext={handleLogIn}
+                    btnNext={handleLogIn}
                     customCss={style.loginbtn}
                   />
                 </div>
@@ -67,8 +124,10 @@ function Login() {
                 <Input
                   className={style.input}
                   placeholder="Phone, email or username"
+                  handleOnchange={loginValue}
                 />
               </div>
+              <span style={{ color: "red" }}>{loginError}</span>
               <br />
               <CustomButton
                 buttonText="Next"

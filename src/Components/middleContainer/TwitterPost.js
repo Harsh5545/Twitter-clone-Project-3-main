@@ -2,6 +2,7 @@ import React from "react";
 import { GoVerified } from "react-icons/go";
 import style from "./TwitterPost.module.css";
 import TweetCard from "react-tweet-card";
+import isVerified from "react-tweet-card";
 
 function TwitterPost() {
   // const post = [
@@ -74,24 +75,23 @@ function TwitterPost() {
         }}
         emojis={true} // try setting this to true 👀
         showDetails={true} // try setting this to true 😬
-        theme="light"
+        theme="dim"
         border="3px"
         author={{
-          name: "Pavan Patil",
-          username: "xxxpavan",
+          name: "virat",
+          username: "virat",
           image:
-            "https://pbs.twimg.com/profile_images/1579548555131424775/PgoOLvU7_400x400.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/725px-Virat_Kohli_portrait.jpg",
+          isVerified,
         }}
         tweet={`You say that it's fucked that gingerbread men live in gingerbread houses, but to a gingerbread person, gingerbread is as inscrutable and fundamental as carbon. The people and homes are no more alike than humans are to diamonds. Only we, their gods and creators, can see the horror`}
         time={new Date(2021, 11, 21, 14, 6)}
         source="Twitter for iPhone"
-        permalink="https://twitter.com/ethanhardy/status/1473278732676837382"
+        permalink="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/725px-Virat_Kohli_portrait.jpg"
         fitInsideContainer
       />
 
-
-
-<TweetCard
+      <TweetCard
         engagement={{
           replies: 206,
           retweets: 17600,
@@ -99,19 +99,19 @@ function TwitterPost() {
         }}
         emojis={true} // try setting this to true 👀
         showDetails={true} // try setting this to true 😬
-        theme="light"
+        theme="dim"
         border="3px"
         author={{
-          name: "Yashwardhan ",
-          username: "xxxpavan",
-          image:
-            "https://pbs.twimg.com/profile_images/1579548555131424775/PgoOLvU7_400x400.jpg",
+          name: "rohit ",
+          username: "Rohit",
+          image: "https://image3.mouthshut.com/images/imagesp/925047023s.jpeg",
         }}
         tweet={`You say that it's fucked that gingerbread men live in gingerbread houses, but to a gingerbread person, gingerbread is as inscrutable and fundamental as carbon. The people and homes are no more alike than humans are to diamonds. Only we, their gods and creators, can see the horror`}
         time={new Date(2021, 11, 21, 14, 6)}
         source="Twitter for iPhone"
         permalink="https://twitter.com/ethanhardy/status/1473278732676837382"
         fitInsideContainer
+        blurredBackground
       />
     </>
   );

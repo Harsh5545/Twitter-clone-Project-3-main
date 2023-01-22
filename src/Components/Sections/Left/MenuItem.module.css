@@ -14,6 +14,7 @@
   display: flex;
   justify-content: flex-end;
 
+
 }
 
   .sidebarOption {
@@ -21,13 +22,11 @@
     align-items: center;
     cursor: pointer;
     gap:0.6rem;
-    padding: 0.3rem;
+    padding: 0.3rem 1rem;
+   width: max-content;
     font-family: "TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif";
   }
-.innerContainer{
-  position: fixed;
 
-}
   
   .sidebarOption h2 {
     font-weight: 800;
@@ -40,7 +39,9 @@
     font-size: 1.2rem;
     
   }
-  
+  .container{
+    gap: 4rem;
+  }
   .sidebarOption:hover {
     background-color: rgb(77, 75, 75);
     border-radius: 30px;
@@ -48,7 +49,9 @@
     transition: color 100ms ease-out;
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif
   }
-
+.innerContainer{
+  position: fixed;
+}
   
   .sidebarOptionactive {
     color: var(--twitter-color);
@@ -71,12 +74,20 @@
     margin-top: 1rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    margin-bottom: 1rem;
   }
   
   .fatwitter {
     color: var(--twitter-color);
     font-size: 30px;
   }
-.button2{
-  margin-bottom: 0rem ;
+
+
+.logo
+{
+  font-weight: 800;
+  font-size: 1.641rem;
+  color: rgb(231, 233, 234);
+  margin-left: 1.4rem;
+  
 }
