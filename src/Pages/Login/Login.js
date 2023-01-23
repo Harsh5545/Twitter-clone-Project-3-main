@@ -6,8 +6,9 @@ import Input from "../../Atom/Input/Input";
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
-import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
+import { Link } from "react-router-dom";
+
 
 function Login() {
   const [nextbtn, setNextBtn] = useState(false);

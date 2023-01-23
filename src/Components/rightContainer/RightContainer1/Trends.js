@@ -2,38 +2,59 @@ import React from "react";
 import { useState } from "react";
 import style from "./Trends.module.css";
 import CustomButton from "../../../Atom/Button/CustomButton";
+import Dialog2 from "../../Dialog2/DialogBox2";
 
 const Trends = () => {
+  const [open, setOpen] = useState(false);
+  const handleclickOpen = () => {
+    setOpen(true);
+  };
+  const handleClickClose = () => {
+    setOpen(false);
+  };
+
   const [state, setState] = useState([
     {
       id: 1,
-      country: "Trending in India",
-      keyword: "#Ms Dhoni",
+      country: "Trending in Election",
+      keyword: "#Modi",
       totalKeywords: "8000k Tweets",
+      isNotIntrested: false,
     },
     {
       id: 2,
       country: "Trending in India",
       keyword: "#Virat kohli",
       totalKeywords: "6000k Tweets",
+      isNotIntrested: false,
     },
     {
       id: 3,
       country: "Trending in Sports",
       keyword: "#RohitSharma",
       totalKeywords: "2560k Tweets",
+      isNotIntrested: false,
     },
     {
       id: 4,
       country: "Trending in Sports",
       keyword: "#ViratKohli",
       totalKeywords: "2000k Tweets",
+      isNotIntrested: false,
     },
     {
       id: 5,
       country: "Trending in Sports",
       keyword: "#sachin",
       totalKeywords: "2000k Tweets",
+      isNotIntrested: false,
+    },
+    {
+      id: 6,
+      country: "Trending in Bollywood",
+      keyword: "#kartik",
+      totalKeywords: "20000k Tweets",
+      isNotIntrested: false,
     },
   ]);
   return (
@@ -54,7 +75,13 @@ const Trends = () => {
               </div>
             </div>
             <div className={style.btn}>
-              <CustomButton buttonText="..." customCss={style.btn1} />
+              <CustomButton
+                buttonText="..."
+                btnNext={handleclickOpen}
+                customCss={style.btn1}
+              />
+
+              <Dialog2 open={open} onClose={handleClickClose} />
             </div>
           </div>
         ))}

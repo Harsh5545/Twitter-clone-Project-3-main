@@ -34,15 +34,15 @@ function WhatHappening() {
                   </ul>
                 );
               })}
+              <CustomButton
+                buttonText="Tweet"
+                btnNext={() => {
+                  setIsOpen(true);
+                }}
+                customCss={style.button}
+              />
             </div>
           </div>
-          <CustomButton
-            buttonText="Tweet"
-            btnNext={() => {
-              setIsOpen(true);
-            }}
-            customCss={style.button}
-          />
         </div>
       </div>
     </>
