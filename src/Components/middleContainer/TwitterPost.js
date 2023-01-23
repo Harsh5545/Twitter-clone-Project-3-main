@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GoVerified } from "react-icons/go";
 import style from "./TwitterPost.module.css";
 import TweetCard from "react-tweet-card";
@@ -12,6 +12,10 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 
 function TwitterPost() {
+  const [likes, setLikes] = useState(0);
+  function handleLike() {
+    setLikes(likes=likes+1);
+  }
   const PostData = tweetPosts;
   return (
     <>
@@ -39,7 +43,10 @@ function TwitterPost() {
                   </span>
                   <span>
                     {Data.likesCount}
-                    <FavoriteBorderIcon />
+                    {likes}
+                    <button className={style.likebtn} onClick={handleLike}>
+                      <FavoriteBorderIcon />
+                    </button>
                   </span>
                   <span>
                     {Data.viewsCount}

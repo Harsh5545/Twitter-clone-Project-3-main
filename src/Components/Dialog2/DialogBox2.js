@@ -1,26 +1,34 @@
-import Dialog from "@mui/material/Dialog";
-import CustomButton from "../../Atom/Button/CustomButton";
+import { Button, Popover } from "antd";
+import { useState } from "react";
+
 import style from "./DialogBox2.module.css";
-import React from "react";
 
-function Dialog2(props) {
-  const { onClose, selectedValue, open } = props;
-  const handleClose = () => {
-    onClose(selectedValue);
+const DialogBox2 = (props) => {
+  const [open, setOpen] = useState(false);
+  // const[IsNotIntrested,setIsNotIntrested]=useState(false)
+
+  // function Hello(e) {
+  //  alert("hllo")
+  //  setIsNotIntrested(true)
+  // }
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
   };
-
   return (
-    <div className={style.dialog}>
-      <Dialog onClose={handleClose} open={open}>
-        <div className={style.container}>
-          <CustomButton
-            buttonText="Not intrestd in this "
-            custom  Css={style.button}
-          />
-          <CustomButton buttonText="block" customCss={style.button} />
-        </div>
-      </Dialog>
-    </div>
+    <Popover
+      content={<a onClick={props.onClick}>🙁  Is Not Intrested</a>}
+      title=" 😒 This trend is harmful or spammy"
+      trigger="click"
+      open={open}
+      overlayInnerStyle={{
+        color: "#fff",
+        background: "white",
+        border: "1px solid #fff",
+      }}
+      onOpenChange={handleOpenChange}
+    >
+      <Button className={style.btn}>...</Button>
+    </Popover>
   );
-}
-export default Dialog2;
+};
+export default DialogBox2;
