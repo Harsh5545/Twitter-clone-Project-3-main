@@ -3,16 +3,16 @@ import style from "./Login.module.css";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { FaTwitter } from "react-icons/fa";
 import Input from "../../Atom/Input/Input";
-import { Navigate, useNavigate } from "react-router-dom";
-
-// import { Data } from "../../Recoil/Atom1/Atom";
+import { useNavigate } from "react-router-dom";
+import { useSetRecoilState } from "recoil";
+import { isLoginAtom } from "../../Recoil/Atom1/Atom";
 import { Link } from "react-router-dom";
 import { isValidLogin } from "../../helper";
+
 function Login() {
   const [nextbtn, setNextBtn] = useState(false);
-  // const [isLogin, setIsLogin] = useRecoilState(Data);
-  // setIsLogin(true);
-  const nevigate = useNavigate();
+  const setLoginStatus = useSetRecoilState(isLoginAtom);
+  const navigate = useNavigate();
   const [loginv, setLoginV] = useState("");
   const [passWordValue, setPasswordValue] = useState("");
   const [localstorageKey, setLocalstorageKey] = useState();
@@ -63,8 +63,9 @@ function Login() {
     }
 
     if (flagForLs == 1) {
-      alert("True");
-      nevigate = "/";
+      setLoginStatus(true);
+      alert("successfully Login");
+      navigate("/");
     } else {
       alert("false");
     }

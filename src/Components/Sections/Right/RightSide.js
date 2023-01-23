@@ -8,15 +8,15 @@ import Search from "../../../Atom/Search/search";
 function RightSide() {
   return (
     <div className={style.container}>
-      {/* <div> */}
+      <div>
       <Search />
-      {/* </div>
-      <div> */}
+      </div>
+       <div>
       <Trends />
-      {/* </div> */}
-      {/* <div> */}
+      </div>
+      <div>
       <RightContainer2 />
-      {/* </div> */}
+      </div>
       <div className={style.copyright}>
         <h6>
           Terms of Service Privacy Policy Cookie Policy Accessibility Ads info

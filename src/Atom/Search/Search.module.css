@@ -1,13 +1,14 @@
 .trends {
     width:100%;
-    
+    position: fixed;
   }
   .trends__search {
-    background-color: #000000;
-    position: fixed;
-    width: 25%;
+
+    width: 24.6%;
     right: 6rem;
-    padding-bottom: 1.25rem;
+
+ 
+   
    
   }
   .trend__control {
@@ -18,6 +19,7 @@
     border-radius: 50px;
     color:white;
     padding: 0.93rem 2rem;
+    
   }
   .trend__icon {
     position: absolute;
@@ -25,6 +27,7 @@
   
   }
   .search {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: silver;
+    margin-left: .5rem;
   }
