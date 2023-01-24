@@ -71,6 +71,7 @@
     border-radius: 1.5rem;
     border: none;
     outline: none;
+    margin-top: 1.5rem;
     font-size: 18px;
   
 }
@@ -109,6 +110,7 @@ padding-left: 0px;
     color: white;
     border: 1px gray solid; 
     border-radius: 0.3rem ;
+    margin-bottom:1rem ;
     
 }
 .input2{
