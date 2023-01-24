@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import style from "./Trends.module.css";
-
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Dialog2 from "../../Dialog2/DialogBox2";
 import { DataArrayRounded } from "@mui/icons-material";
 
@@ -10,8 +10,8 @@ const Trends = () => {
     {
       id: 1,
       isNotIntrested: false,
-      country: "Trending in India",
-      keyword: "#Ms Dhoni",
+      country: "Trending in Sports",
+      keyword: "Rohit Sharma",
       totalKeywords: "8000k Tweets",
     },
     {
@@ -25,14 +25,14 @@ const Trends = () => {
       id: 3,
       isNotIntrested: false,
       country: "Trending in Sports",
-      keyword: "#RohitSharma",
+      keyword: "#Hardik Pandya",
       totalKeywords: "2560k Tweets",
     },
     {
       id: 4,
-      isNotIntrested: true,
-      country: "Trending in Sports",
-      keyword: "#ViratKohli",
+      isNotIntrested: false,
+      country: "Trending in Bollywood",
+      keyword: "#RRR",
       totalKeywords: "2000k Tweets",
     },
     {
@@ -82,7 +82,21 @@ const Trends = () => {
                 </div>
               </div>
               <div className={style.btn}>
-                <Dialog2 onClick={HandleClick} />
+                <Dialog2
+                  onClick={HandleClick}
+                  title={
+                    <div>
+                      <SentimentVeryDissatisfiedIcon /> This trend is harmful or
+                      spammy
+                    </div>
+                  }
+                  content={
+                    <a>
+                      <SentimentVeryDissatisfiedIcon />
+                      Is not Intrested
+                    </a>
+                  }
+                />
               </div>
             </div>
           );

@@ -7,6 +7,7 @@ import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 function WhatHappening() {
   const [isOpen, setIsOpen] = useState(false);
+  const [retweet, setRetweet]= useState("")
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
     { id: 1, icon: <FaImage /> },

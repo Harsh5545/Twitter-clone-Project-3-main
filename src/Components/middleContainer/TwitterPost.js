@@ -12,9 +12,9 @@ import PollIcon from "@mui/icons-material/Poll";
 import UploadIcon from "@mui/icons-material/Upload";
 
 function TwitterPost() {
-  const [likes, setLikes] = useState(0);
+  const [likesCount, setLikesCount] = useState(0);
   function handleLike() {
-    setLikes(likes=likes+1);
+    setLikesCount(likesCount + 1);
   }
   const PostData = tweetPosts;
   return (
@@ -43,7 +43,8 @@ function TwitterPost() {
                   </span>
                   <span>
                     {Data.likesCount}
-                    {likes}
+                    {likesCount}
+
                     <button className={style.likebtn} onClick={handleLike}>
                       <FavoriteBorderIcon />
                     </button>

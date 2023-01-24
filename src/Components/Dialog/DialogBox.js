@@ -6,7 +6,6 @@ import { useSetRecoilState } from "recoil";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
 
 function DialogBox(props) {
-
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   const { onClose, selectedValue, open } = props;
   const handleClose = () => {
@@ -17,7 +16,11 @@ function DialogBox(props) {
     alert("successfully Logout");
   }
   return (
-    <Dialog className={style.dialog} onClose={handleClose} open={open}>
+    <Dialog
+      style={{ boxShadow: "0 0 10px #000" }}
+      onClose={handleClose}
+      open={open}
+    >
       <div className={style.container}>
         <CustomButton
           buttonText="Add an existing user"
