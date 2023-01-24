@@ -46,6 +46,7 @@ function Tweet() {
             buttonText="Tweet"
             btnNext={() => {
               setIsOpen(true);
+              alert("working");
             }}
             customCss={style.button}
           />

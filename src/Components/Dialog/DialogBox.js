@@ -13,7 +13,7 @@ function DialogBox(props) {
   };
   function handaleClick() {
     setLoginStatus(false);
-    alert("successfully Logout");
+    alert("You Are successfully Logout ");
   }
   return (
     <Dialog

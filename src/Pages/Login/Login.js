@@ -37,11 +37,9 @@ function Login() {
     let flagForLs = 0;
     for (var i = 0; i < localStorage.length; i++) {
       let k = JSON.parse(localStorage.getItem("user" + i));
-      //console.log(k.Email)
-      //console.log(loginv)
       if (k.Email === loginv || k.Name === loginv || k.Phone == loginv) {
         flagForLs = 1;
-        //const store=i;
+      
         setLocalstorageKey(i);
       }
     }
