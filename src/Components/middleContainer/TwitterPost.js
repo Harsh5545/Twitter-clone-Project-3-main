@@ -50,7 +50,7 @@ export default function TwitterPost() {
                   </h3>
                 </span>
                 <h4>{data.handlerName}</h4>
-                <h6>{data.tweetText}</h6>
+                <h5>{data.tweetText}</h5>
               </div>
             </div>
 
