@@ -1,11 +1,11 @@
-  import { atom } from "recoil";
+import { atom } from "recoil";
 
-  export const isLoginAtom = atom({
-    key: "isLogin",
-    default: true,
-  });
+export const isLoginAtom = atom({
+  key: "isLogin",
+  default: false,
+});
 
-  export const isTweetPost = atom({
-    key: "isPost",
-    default: 0,
-  });
+export const isTweetPost = atom({
+  key: "isPost",
+  default: 0,
+});
