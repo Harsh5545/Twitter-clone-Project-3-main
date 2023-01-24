@@ -1,58 +1,28 @@
-.Avtar {
-  width: 4rem;
-  height: 4rem;
-  margin: 0.5rem;
+.wrapper{
+  color: white;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+  border: 1px blueviolet solid;
+  gap: 1rem;
+ padding: 2rem;
 }
-.content {
-  background:transparent;
-  border-radius: 0.6em;
-  margin: 0.4em;
+.container1{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  /* overflow: hidden; */
-  cursor: pointer;
+  justify-content:flex-start;
+  gap: 1rem;
 }
-.container{
-  border: 0.1px solid #fff;
-}
-.details {
-  gap: 0.4rem;
-}
-details p {
-  font-size: 0.1rem;
-}
-.Avtar{
-  z-index: -1;
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: blue;
 }
 .img{
-  width: 30rem;
-text-align: center;
-min-height: 32.5rem;
- margin: 1rem 1.5rem;
-} 
-  
- .icons{
-  display: flex;
-  flex-direction: row;
-padding-left: 1.6rem;
-  gap: 3rem;
-}
-.contentIcon{
-  display: flex;
-  align-items: center;
-}
-.icons span {
+padding-left: 1.5rem;
 
- align-items: center;
- padding: 0.2rem;
 }
-.likebtn{
-  background: none;
-  color:gray;
-}
-.wrapper{
- padding: 2rem 1rem;
-  border-top: 0.1px  solid #fff;
-  border-radius: 2px;
+.avatar{
+  z-index: -1;
 }

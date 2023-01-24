@@ -5,7 +5,7 @@ export const isLoginAtom = atom({
   default: true,
 });
 
-export const islatestAtom = atom({
-  key: "latestTweet",
-  default: true,
+export const isTweetPost = atom({
+  key: "isPost",
+  default: 0,
 });

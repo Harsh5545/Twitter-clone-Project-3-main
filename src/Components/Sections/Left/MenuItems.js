@@ -52,10 +52,10 @@ function LeftSec() {
               <FaTwitter />
             </div>
 
-            {menu.map((menu) => {
+            {menu.map((menu, index) => {
               return (
-                <div className={style.sidebar}>
-                  <div className={style.sidebarOption} key={menu.id}>
+                <div className={style.sidebar} key={menu}>
+                  <div className={style.sidebarOption}>
                     <h2>{menu.icon}</h2>
                     <span>{menu.Name}</span>
                   </div>
