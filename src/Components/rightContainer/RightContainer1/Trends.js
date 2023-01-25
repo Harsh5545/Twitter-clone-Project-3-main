@@ -67,12 +67,13 @@ const Trends = () => {
         {isNotIntrested.map((keyword) => {
           return (
             <div
+              key={keyword.id}
               className={style.container}
               onClick={() => {
                 updateId(keyword.id);
               }}
             >
-              <div key={keyword.id}>
+              <div>
                 <div className={style.country}>{keyword.country}</div>
                 <div className={style.keyword__name}>
                   <strong>{keyword.keyword}</strong>

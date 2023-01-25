@@ -6,13 +6,11 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiUserCircle } from "react-icons/bi";
 import CustomButton from "../../Atom/Button/CustomButton";
 import { tweetPosts } from "../../TweetData/TweetData";
-import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isTweetPost } from "../../Recoil/Atom1/Atom";
 
 function WhatHappening() {
   const [storeArray, setStoreArray] = useState("");
-  // const [forTrue, setForTrue] = useState(0);
   const [loginStatus, setLoginStatus] = useRecoilState(isTweetPost);
   const Icons = [
     { id: 0, icon: <FaGlobe /> },
@@ -23,9 +21,6 @@ function WhatHappening() {
     { id: 5, icon: <BiUserCircle /> },
   ];
 
-  /*useEffect(() => {
-  TwitterPost()
-  },[forTrue]);*/
   function takeTweet(e) {
     setStoreArray(e.target.value);
   }
@@ -46,8 +41,7 @@ function WhatHappening() {
     };
 
     tweetPosts.unshift(newObj);
-    // console.log(tweetPosts);
-    // setForTrue(forTrue + 1);
+
     setLoginStatus(loginStatus + 1);
   }
 

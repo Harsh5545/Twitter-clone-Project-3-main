@@ -12,8 +12,13 @@ function DialogBox(props) {
     onClose(selectedValue);
   };
   function handaleClick() {
-    setLoginStatus(false);
-    alert("You Are successfully Logout ");
+    let text = "Do You Logout ! \nEither Ok or Cancel";
+    if (window.confirm(text) == true) {
+      setLoginStatus(false);
+      alert("successfully Logout");
+    } else {
+      text = " Cancel";
+    }
   }
   return (
     <Dialog

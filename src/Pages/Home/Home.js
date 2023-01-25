@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import MenuItems from "../../Components/Sections/Left/MenuItems";
 import style from "./Home.module.css";
-import { FaTwitter } from "react-icons/fa";
-import { Dialog } from "@mui/material";
 import { useRecoilValue } from "recoil";
 import RightSide from "../../Components/Sections/Right/RightSide";
 import MiddleContainer from "../../Components/Sections/Middle/MiddleContainer";

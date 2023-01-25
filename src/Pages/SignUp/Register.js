@@ -18,13 +18,10 @@ import { useNavigate } from "react-router-dom";
 function Register() {
   const [form, Setform] = useState(false);
   const [toggle, setToggle] = useState(false);
-
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const [data, setData] = useState([]);
   const [incl, setIncl] = useState(0);
   const [month, setMonth] = useState("");
   const [day, setDay] = useState("");
@@ -36,13 +33,6 @@ function Register() {
   const [passwordError, setPasswordError] = useState("");
   const setLoginStatus = useSetRecoilState(isLoginAtom);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (localStorage.getItem("user")) {
-  //     let data = JSON.parse(localStorage.getItem("user"));
-  //     setData(data);
-  //     console.log(data);
-  //   }
-  // }, []);
 
   function Form() {
     Setform(true);
@@ -88,35 +78,26 @@ function Register() {
     let flag = 0;
     if (!isValidString(name)) {
       setNameError("please fill correct name input");
-      //  flag = 0;
     } else {
-      // flag = 1;
       setNameError("");
     }
 
     if (toggle === true) {
       if (!isValidMobile(phone)) {
         setPhoneError("please fill correct phone input");
-        // flag = 0;
       } else {
-        // flag = 1;
         setPhoneError("");
       }
     } else {
       if (!isValidEmail(email)) {
         setEmailError("please fill correct email input");
-
-        //flag = 0;
       } else {
-        // flag = 1;
         setEmailError("");
       }
     }
     if (!isValidPassword(password)) {
-      // flag=0
       setPasswordError("please fill correct password input");
     } else {
-      //flag=1
       setPasswordError("");
     }
 

@@ -49,7 +49,7 @@ function Righthomebox2() {
       <div className={style.main}>
         {followContainer.map((menu) => {
           return (
-            <div className={style.wrapper}>
+            <div className={style.wrapper} key={menu.id}>
               <Avatar alt="Remy Sharp" src={menu.src} />
               <div className={style.img}>
                 <h3>
@@ -63,9 +63,7 @@ function Righthomebox2() {
                 <CustomButton
                   buttonText={menu.followed ? "Following" : "Follow"}
                   btnNext={() => handleClick(menu.id)}
-                  key={menu.id}
                   customCss={style.follwButton}
-                  disabled={menu.followed}
                 />
               </div>
             </div>

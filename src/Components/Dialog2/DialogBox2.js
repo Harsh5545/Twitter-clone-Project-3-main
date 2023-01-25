@@ -1,6 +1,5 @@
 import { Button, Popover } from "antd";
 import { useState } from "react";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import style from "./DialogBox2.module.css";
 
 const DialogBox2 = (props) => {
