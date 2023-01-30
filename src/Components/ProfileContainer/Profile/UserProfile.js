@@ -3,8 +3,10 @@ import style from "./UserProfile.module.css";
 import WestIcon from "@mui/icons-material/West";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../../Atom/Button/CustomButton";
+import Trends from "../../rightContainer/RightContainer1/Trends";
+import TwitterPost from "../../middleContainer/TwitterPost";
 function Userprofile() {
-    const Navigate= useNavigate()
+  const Navigate = useNavigate();
   let Data = JSON.parse(localStorage.getItem("user0"));
   const handleClick = () => {
     alert(Data.Name + " ,You can't Edit");
@@ -13,7 +15,9 @@ function Userprofile() {
     <>
       <div className={style.wrapper}>
         <div className={style.feed__header}>
-        <p onClick={()=> Navigate("/") }><WestIcon /></p>
+          <p onClick={() => Navigate("/")}>
+            <WestIcon />
+          </p>
           <h2>{Data.Name}</h2>
         </div>
 
@@ -33,6 +37,8 @@ function Userprofile() {
           <h5>{`${"@"}${Data.Email}`}</h5>
           <h5>{`${"Mob no:-"}${Data.Phone}`}</h5>
         </div>
+
+        <TwitterPost />
       </div>
     </>
   );

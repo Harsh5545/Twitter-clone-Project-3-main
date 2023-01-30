@@ -3,7 +3,7 @@ import { useState } from "react";
 import style from "./Trends.module.css";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Dialog2 from "../../Dialog2/DialogBox2";
-import { DataArrayRounded } from "@mui/icons-material";
+// import { DataArrayRounded } from "@mui/icons-material";
 
 const Trends = () => {
   const [isNotIntrested, setIsNotIntrested] = useState([
@@ -92,10 +92,10 @@ const Trends = () => {
                     </div>
                   }
                   content={
-                    <a>
+                    <p>
                       <SentimentVeryDissatisfiedIcon />
                       Is not Intrested
-                    </a>
+                    </p>
                   }
                 />
               </div>

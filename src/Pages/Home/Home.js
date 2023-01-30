@@ -6,16 +6,18 @@ import RightSide from "../../Components/Sections/Right/RightSide";
 import MiddleContainer from "../../Components/Sections/Middle/MiddleContainer";
 import { isLoginAtom } from "../../Recoil/Atom1/Atom";
 import { useNavigate } from "react-router-dom";
+import { isTweetSelected } from "../../Recoil/Atom1/Atom";
+import SelectedTweet from "../../TweetData/SelectedTweet";
 
 function Home() {
-    const isUserLoggedIn = useRecoilValue(isLoginAtom);
-    const nevigate = useNavigate();
-
-    useEffect(() => {
-      if (!isUserLoggedIn) {
-        nevigate("/Login");
-      }
-    });
+  const isUserLoggedIn = useRecoilValue(isLoginAtom);
+  const nevigate = useNavigate();
+  const isTweetSelect = useRecoilValue(isTweetSelected);
+  useEffect(() => {
+    if (!isUserLoggedIn) {
+      nevigate("/Login");
+    }
+  });
 
   return (
     <div className={style.Main}>
@@ -23,7 +25,7 @@ function Home() {
         <MenuItems />
       </div>
       <div className={style.middleContainer}>
-        <MiddleContainer />
+        {isTweetSelect ? <SelectedTweet /> : <MiddleContainer />}
       </div>
       <div className={style.rightContainer}>
         <RightSide />

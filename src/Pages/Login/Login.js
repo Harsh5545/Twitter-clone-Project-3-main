@@ -37,15 +37,15 @@ function Login() {
     let flagForLs = 0;
     for (var i = 0; i < localStorage.length; i++) {
       let k = JSON.parse(localStorage.getItem("user" + i));
-      if (k.Email === loginv || k.Name === loginv || k.Phone == loginv) {
+      if (k.Email === loginv || k.Name === loginv || k.Phone === loginv) {
         flagForLs = 1;
       
         setLocalstorageKey(i);
       }
     }
-    if (flagForLs == 1 && flag == 0) {
+    if (flagForLs === 1 && flag === 0) {
       setNextBtn(true);
-    } else if (flagForLs == 0) {
+    } else if (flagForLs === 0) {
       setNextBtn(false);
       setLoginError("User Not Found");
     }
@@ -61,7 +61,7 @@ function Login() {
       flagForLs = 1;
     }
 
-    if (flagForLs == 1) {
+    if (flagForLs === 1) {
       setLoginStatus(true);
       alert("successfully Login");
       navigate("/");

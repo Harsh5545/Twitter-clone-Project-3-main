@@ -26,6 +26,7 @@ function WhatHappening() {
   }
   function handleNewTweet() {
     let newObj = {
+      if: "",
       name: "Harsh Kajale ",
       handlerName: "@harsh5545",
       organization: "United States government organization",
@@ -63,7 +64,7 @@ function WhatHappening() {
             <div className={style.bottom}>
               {Icons.map((menu) => {
                 return (
-                  <ul className={style.icons}>
+                  <ul key={menu.id} className={style.icons}>
                     <li>{menu.icon}</li>
                   </ul>
                 );

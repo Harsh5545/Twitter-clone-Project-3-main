@@ -13,11 +13,13 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 
 import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { isTweetPost } from "../../Recoil/Atom1/Atom";
+import { isTweetPost, isTweetSelected, selectedTweet} from "../../Recoil/Atom1/Atom";
 
 export default function TwitterPost() {
+  const [isTweet, setIsTweetSelected] = useRecoilState(isTweetSelected);
+  const [tweet, setSelectedTweet] = useRecoilState(selectedTweet);
+
   const [post, setPost] = useState(tweetPosts);
-  //const[lpost,setLpost]=useState(tweetPosts.length)
   const [newPost, setNewPost] = useRecoilState(isTweetPost);
 
   useEffect(() => {
@@ -28,17 +30,19 @@ export default function TwitterPost() {
     setPost(tweetPosts);
   }
 
-  function fetchData() {
-    setPost(tweetPosts);
+  function handleSelectedTweet(tweetId) {
+    setIsTweetSelected(true);
+    setSelectedTweet(tweetId)
+    console.log(tweetId);
   }
-
+  console.log(post);
   return (
     <>
       {post.map((data) => {
         return (
-          <div className={style.wrapper}>
+          <div className={style.wrapper} key={data.id}>
             <div className={style.container1}>
-              <div>
+              <div onClick={() => handleSelectedTweet(data.id)}>
                 <Avatar className={style.avatar} src={data.tweetPic} />
               </div>
 

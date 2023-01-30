@@ -16,16 +16,26 @@ import { Avatar } from "@mui/material";
 import CustomButton2 from "../../../Atom/Button/CustomButton2";
 import DialogBox from "../../Dialog/DialogBox";
 import { useNavigate } from "react-router-dom";
+import { isTweetSelected } from "../../../Recoil/Atom1/Atom";
+import { useRecoilValue } from "recoil";
 // import User from "./User";
 
 function LeftSec() {
   const navigate = useNavigate();
+  const isTweetSelect = useRecoilValue(isTweetSelected);
   let Data = JSON.parse(localStorage.getItem("user0"));
+
+  const handleClick = () => {
+    navigate("/");
+    isTweetSelect(false);
+   
+  };
+
   const menu = [
     {
       id: 1,
       icon: <FaHouseUser />,
-      Name: <p onClick={() => navigate("/")}>Home</p>,
+      Name: <p onClick={handleClick}>Home</p>,
     },
     { id: 2, icon: <FaHashtag />, Name: "Explore" },
     { id: 3, icon: <VscBellDot />, Name: "Notifications" },

@@ -8,4 +8,13 @@ export const isLoginAtom = atom({
 export const isTweetPost = atom({
   key: "isPost",
   default: 0,
-});
+}); 
+export const isTweetSelected = atom({
+  key: "isSelectedPost",
+  default:false
+})
+
+export const selectedTweet = atom({
+  key: "selevtedtweet",
+  default: 0
+})
